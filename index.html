@@ -25,12 +25,16 @@
     </style>
 </head>
 <body class="bg-info">
-    <h1 id="title">Hello my first page !</h1>
-    <p>updata 2025-04-04</p>
-    <h2>alpine.js Demo</h2>
-    <div x-data="{display:false}">
-        <button x-on:click="display=!display" class="btn btn-warning">Hello Display</button>
-        <h2 x-show="display" class="text-white">Hello</h2>
+    <div class="container d-flex flex-column justify-content-center">
+        <header class="bg-dark p-3">
+            <h1 id="title">Hello my first page !</h1>
+            <p class="text-white">updata 2025-04-04</p>
+        </header>
+        <h2>alpine.js Demo</h2>
+        <div x-data="{display:false}">
+            <button x-on:click="display=!display" class="btn btn-warning">Hello Display</button>
+            <h2 x-show="display" class="text-white">Hello</h2>
+        </div>
     </div>
 </body>
 
