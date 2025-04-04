@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>new page</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
     <style>
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        h1{
+        body{
+            padding: 2rem;
+        }
+        #title{
             font-size: 2.5rem;
             font-weight: 900;
             background: linear-gradient(60deg,red,yellow);
@@ -20,7 +25,13 @@
     </style>
 </head>
 <body>
-    <h1>Hello my first page !</h1>
-    <p>updata 2025-04-03</p>
+    <h1 id="title">Hello my first page !</h1>
+    <p>updata 2025-04-04</p>
+    <h2>alpine.js Demo</h2>
+    <div x-data="{display:false}">
+        <button x-on:click="display=!display" class="btn btn-primary">Hello Display</button>
+        <h2 x-show="display" class="text-warning">Hello</h2>
+    </div>
 </body>
+
 </html>
